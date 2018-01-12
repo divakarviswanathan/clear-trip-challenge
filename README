@@ -1,0 +1,41 @@
+1) Start the LibrarymanagementApplication class
+2) The application begins at port 9000
+3) Please refer the end points mentioned below for usage. For Book transaction use the Strings (BORROW, RETURN) appropriately. The library transaction end point can be improved, due to time constraint the whole project does the basic stuff.
+	User APIs
+
+	1)	URL:		http://localhost:9000/v1/user
+		Method:		POST
+		Request Body:	{
+					 "userName" :"divakar"
+				}
+		Description:	"Adds a new  User"
+
+	2)	URL:		http://localhost:9000/v1/user?userName=di
+		Method:		GET
+		Description:	"Gets the matching list of users"
+
+	Book APIs
+
+	1)	URL:		http://localhost:9000/v1/book
+	  	Method:		POST
+		RequestBody:	{
+				 "bookName" :"Where are you now?",
+				 "authorName" : "Mary Higgins Clark"
+				}
+		Description:	"Adds a new  book"
+
+	2) 	URL:		http://localhost:9000/v1/book?bookName=wh&authorName=mar
+	  	Method:		GET
+		Description:	"Gets the matching list of books"
+
+	Library APIs
+	1)	URL:		http://localhost:9000/v1/library
+	  	Method:		POST
+		RequestBody:	{
+ 					"userId" :1,
+ 					"bookId" : 1,
+					 "action" : "RETURN"
+				}
+		Description:	"Adds a new transaction"
+
+
